@@ -1,0 +1,84 @@
+/* base */
+html {
+  font-size: 62.5%;
+}
+
+body {
+  font-family: $font-family-body;
+  font-size: $font-size;
+}
+
+/* headings */
+
+// Headings common
+h1, h2, h3, h4, h5, h6 {
+  font-family: $font-family-head;
+  font-weight: $font-weight-head;
+  margin-bottom: 0.5em;
+}
+
+@for $i from 1 through 6 {
+  h#{$i} {
+    font-size: $font-size * nth($font-size-head, $i);
+  }
+}
+
+// Lists
+ul {
+  list-style: circle;
+  margin-left: 1.2em;
+
+  ul {
+    list-style: disc;
+  }
+}
+
+ol {
+  list-style: decimal;
+  margin-left: 1.2em;
+
+  ol {
+    list-style: lower-roman;
+  }
+}
+
+// Paragraph
+p {
+  line-height: 1.5em; // TODO: Parameterize
+  margin-bottom: 1em; // TODO: Parameterize
+}
+
+// Other text elements
+a {
+  color: $color-link;
+
+  &:hover {
+    color: $color-link-hover;
+  }
+}
+
+b, strong {
+  font-weight: $font-weight-bold;
+}
+
+i, em {
+  font-style: italic;
+}
+
+small {
+  font-size: 0.8em;
+}
+
+big {
+  font-size: 1.2em;
+}
+
+sup {
+  font-size: 0.8em;
+  @include transform(translateY(-0.4em));
+}
+
+sub {
+  font-size: 0.8em;
+  @include transform(translateY(0.4em));
+}

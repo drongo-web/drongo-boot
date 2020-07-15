@@ -1,0 +1,26 @@
+@mixin make-button-outline ($button-class: button, $button-modifier-class: outline) {
+  .#{$button-class}--#{$button-modifier-class} {
+    background: transparent;
+    border: $color-default 1px solid;
+    color: $color-default;
+
+    &:hover {
+      background-color: $color-default;
+      color: $color-default-contrast;
+    }
+
+    &.#{$button-class} {
+      @each $var in $variation-list {
+        &--#{$var} {
+          border-color: map-get($colors, $var);
+          color: map-get($colors, $var);
+
+          &:hover {
+            background-color: map-get($colors, $var);
+            color: map-get($colors-contrast, $var);
+          }
+        }
+      }
+    }
+  }
+}

@@ -1,0 +1,133 @@
+/* Layout related variables */
+
+/* Responsive values
+   Responsive values are defined by minimum width of each device type.
+ */
+// An exhaustive list of responsive values
+// $breakpoint-names: mob-s mob-m mob-l mob tab desk lap lap-l 4k;
+// $breakpoint-sizes: 0px 375px 425px 425px 768px 1024px 1024px 1440px 2560px;
+
+// Minimalistic responsive values
+$breakpoint-names: m t d !default;
+$breakpoint-sizes: 0px 768px 1024px !default;
+
+// Grid system
+$grid-num-columns: 12 !default;
+$grid-gap: 2rem !default;
+
+// Container
+$container-width: 1120px !default;
+$container-padding: 20px !default;
+
+/* Theme related variables */
+// Base Colors
+$color-white: #FFFFFF !default;
+$color-black: #333333 !default;
+
+$color-default: #444444 !default;
+$color-default-contrast: #EEEEEE !default;
+
+$color-negative: #e53935 !default;
+$color-negative-contrast: $color-white !default;
+$color-neutral: #FFC107 !default;
+$color-neutral-contrast: $color-white !default;
+$color-positive: #43A047 !default;
+$color-positive-contrast: $color-white !default;
+
+$color-info: #2196F3 !default;
+$color-info-contrast: $color-white !default;
+$color-primary: #3949AB !default;
+$color-primary-contrast: $color-white !default;
+$color-secondary: #B0BEC5 !default;
+$color-secondary-contrast: $color-black !default;
+
+// Background, link and header colors
+$color-background: #F5F5F5 !default;
+$color-link: $color-primary !default;
+$color-link-hover: lighten($color-primary, 10%) !default;
+$color-header-background: $color-white !default;
+
+// Social colors
+$color-social-facebook: #3b5999;
+$color-social-messenger: #0084ff;
+$color-social-twitter: #55acee;
+$color-social-linkedin: #0077B5;
+$color-social-yahoo: #410093;
+$color-social-google: #dd4b39;
+$color-social-pinterest: #bd081c;
+$color-social-youtube: #cd201f;
+$color-social-soundcloud: #ff3300;
+$color-social-medium: #02b875;
+$color-social-instagram: #e4405f;
+
+/* Font related variables */
+// Font Family
+$font-family-body: "Open Sans", sans-serif !default;
+$font-family-head: "Open Sans", sans-serif !default;
+
+// Base Font size
+$font-size: 1.4rem !default;
+$font-size-head: 2 1.8 1.65 1.5 1.35 1.2 !default;
+
+// Font weights
+$font-weight-light: 300 !default;
+$font-weight-normal: 400 !default;
+$font-weight-bold: 700 !default;
+
+$font-weight-head: $font-weight-bold !default;
+
+// Label
+$label-border-radius: 0.2rem !default;
+
+// Message
+$message-border-radius: 0.4rem !default;
+
+/* Elements related variables */
+// Button
+$button-height: 2.5em !default;
+$button-padding: 1.5em !default;
+$button-border-radius: 0.4rem !default;
+$button-darken-percent: 10% !default;
+$button-shadow: none !default;
+$button-text-transform: uppercase !default;
+
+// Switch
+$switch-size: 2.4rem !default;
+$switch-size-ratio: 1.6 !default;
+$switch-border: 0.1rem !default;
+$switch-padding: 0.2rem !default;
+
+// Forms
+$form-input-background: transparent !default;
+$form-input-border-color: #EEEEEE !default;
+$form-input-border-width: 0.1rem !default;
+$form-input-border-style: solid !default;
+$form-input-border: $form-input-border-color $form-input-border-width $form-input-border-style !default;
+$form-input-border-radius: 0.4rem !default;
+$form-input-padding-h: 0.8rem !default;
+$form-input-padding-v: 1rem !default;
+
+
+/* Components related variables */
+// Card
+$card-border-color: $color-default-contrast !default;
+
+/* Miscellaneous */
+$variation-list: primary secondary info positive neutral negative;
+$colors: (
+  primary: $color-primary,
+  secondary: $color-secondary,
+  info: $color-info,
+  positive: $color-positive,
+  neutral: $color-neutral,
+  negative: $color-negative
+);
+
+$colors-contrast: (
+  primary: $color-primary-contrast,
+  secondary: $color-secondary-contrast,
+  info: $color-info-contrast,
+  positive: $color-positive-contrast,
+  neutral: $color-neutral-contrast,
+  negative: $color-negative-contrast
+);

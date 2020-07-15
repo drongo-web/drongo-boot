@@ -1,0 +1,16 @@
+@mixin make-label($label-class: label) {
+  .#{$label-class} {
+    background-color: $color-default;
+    border-radius: $label-border-radius;
+    color: $color-default-contrast;
+    font-size: 0.92em;
+    padding: 0.2rem 0.8rem;
+
+    @each $var in $variation-list {
+      &--#{$var} {
+        background-color: map-get($colors, $var);
+        color: map-get($colors-contrast, $var);
+      }
+    }
+  }
+}

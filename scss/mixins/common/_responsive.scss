@@ -1,0 +1,45 @@
+@mixin breakpoint($class) {
+  @if $class == nth($breakpoint-names, length($breakpoint-names)) {
+    @media (min-width: nth($breakpoint-sizes, length($breakpoint-sizes))) { @content; }
+  }
+
+  @for $i from 1 through length($breakpoint-names) - 1 {
+    $bp: nth($breakpoint-names, $i);
+    $bp-high: nth($breakpoint-sizes, $i + 1);
+    $bp-low: nth($breakpoint-sizes, $i);
+
+    @if $class == $bp {
+      @media (max-width: $bp-high - 1px) and (min-width: $bp-low) { @content; }
+    }
+  }
+}
+
+@mixin breakpointDF($class) {
+  @if $class == nth($breakpoint-names, length($breakpoint-names)) {
+    @media (min-width: nth($breakpoint-sizes, length($breakpoint-sizes) - 1)) { @content; }
+  }
+
+  @for $i from 1 through length($breakpoint-names) - 1 {
+    $bp: nth($breakpoint-names, $i);
+    $bps: nth($breakpoint-sizes, $i + 1);
+
+    @if $class == $bp {
+      @media (max-width: $bps - 1px) { @content; }
+    }
+  }
+}
+
+@mixin breakpointMF($class) {
+  @if $class == nth($breakpoint-names, 1) {
+    @media (max-width: nth($breakpoint-sizes, 2) - 1px) { @content; }
+  }
+
+  @for $i from 2 through length($breakpoint-names) {
+    $bp: nth($breakpoint-names, $i);
+    $bps: nth($breakpoint-sizes, $i);
+
+    @if $class == $bp {
+      @media (min-width: $bps) { @content; }
+    }
+  }
+}

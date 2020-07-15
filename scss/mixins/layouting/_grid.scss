@@ -1,0 +1,28 @@
+@mixin make-grid($grid-class: grid, $grid-column-class: col) {
+  .#{$grid-class} {
+    align-items: flex-start;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    margin: 0 -($grid-gap / 2);
+
+    &__#{$grid-column-class} {
+      padding: 0 ($grid-gap / 2);
+      margin: ($grid-gap / 2) 0;
+
+      @for $i from 1 through $grid-num-columns {
+        &--#{$i} {
+          width: 100% * $i / $grid-num-columns;
+        }
+
+        @each $device in $breakpoint-names {
+          &--#{$device}-#{$i} {
+            @include breakpoint($device) {
+              width: 99.9% * $i / $grid-num-columns;
+            }
+          }
+        }
+      }
+    }
+  }
+}

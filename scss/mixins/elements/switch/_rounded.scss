@@ -1,0 +1,15 @@
+@mixin make-switch-rounded($switch-class: switch, $switch-modifier-class: rounded) {
+  label.#{$switch-class}--#{$switch-modifier-class} {
+    input {
+      display: none;
+
+      & + span {
+        border-radius: $switch-size / 2;
+
+        &::before {
+          border-radius: ($switch-size - $switch-padding - $switch-padding) / 2;
+        }
+      }
+    }
+  }
+}

@@ -1,0 +1,41 @@
+@mixin make-button ($button-class: button) {
+  .#{$button-class} {
+    background-color: $color-default;
+    border: $color-default 1px solid;
+    border-radius: $button-border-radius;
+    box-shadow: $button-shadow;
+    color: $color-default-contrast;
+    cursor: pointer;
+    display: inline-block;
+    font-size: 1.2rem;
+    font-weight: $font-weight-normal;
+    line-height: $button-height;
+    padding: 0 $button-padding;
+    text-transform: $button-text-transform;
+    transition: all 0.25s;
+
+    &:hover {
+      background-color: darken($color-default, $button-darken-percent);
+      color: $color-default-contrast;
+    }
+
+    &:active {
+      transition: all 0s;
+      transform: translateY(1px);
+    }
+
+    @each $var in $variation-list {
+      &--#{$var} {
+        background-color: map-get($colors, $var);
+        border-color: map-get($colors, $var);
+        color: map-get($colors-contrast, $var);
+
+        &:hover {
+          background-color: darken(map-get($colors, $var), $button-darken-percent);
+          border-color: darken(map-get($colors, $var), $button-darken-percent);
+          color: map-get($colors-contrast, $var);
+        }
+      }
+    }
+  }
+}

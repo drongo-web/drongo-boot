@@ -1,0 +1,25 @@
+@mixin make-message($message-class: message) {
+  .#{$message-class} {
+    border: $color-default 1px solid;
+    border-radius: $message-border-radius;
+    color: $color-default;
+    padding: 1em;
+
+    @each $var in $variation-list {
+      &--#{$var} {
+        border-color: map-get($colors, $var);
+        color: map-get($colors, $var);
+
+        &.message--fill {
+          background-color: lighten(map-get($colors, $var), 20%);
+          color: darken(map-get($colors, $var), 20%);
+        }
+
+        &.message--inverse {
+          background-color: map-get($colors, $var);
+          color: map-get($colors-contrast, $var);
+        }
+      }
+    }
+  }
+}

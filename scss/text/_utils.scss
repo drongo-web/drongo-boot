@@ -1,0 +1,79 @@
+.text {
+  &--left {
+    text-align: left;
+  }
+
+  &--right {
+    text-align: right;
+  }
+
+  &--center {
+    text-align: center;
+  }
+
+  &--justify {
+    text-align: justify;
+  }
+
+  &--primary {
+    color: $color-primary !important;
+  }
+
+  &--secondary {
+    color: $color-secondary !important;
+  }
+
+  &--info {
+    color: $color-info;
+  }
+
+  &--positive {
+    color: $color-positive;
+  }
+
+  &--neutral {
+    color: $color-neutral;
+  }
+
+  &--negative {
+    color: $color-negative;
+  }
+
+  &--weight-light {
+    font-weight: $font-weight-light;
+  }
+
+  &--weight-normal {
+    font-weight: $font-weight-normal;
+  }
+
+  &--weight-bold {
+    font-weight: $font-weight-bold;
+  }
+
+  &--uppercase {
+    text-transform: uppercase !important;
+  }
+
+  &--lowercase {
+    text-transform: lowercase !important;
+  }
+
+  &--capitalize {
+    text-transform: capitalize !important;
+  }
+}
+
+.float {
+  &--left {
+    float: left !important;
+  }
+
+  &--right {
+    float: right !important;
+  }
+
+  &--none {
+    float: none !important;
+  }
+}

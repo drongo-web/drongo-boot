@@ -1,0 +1,85 @@
+.form {
+  &__control {
+    margin-bottom: 1.2rem;
+
+    input,
+    select,
+    textarea {
+      background-color: $form-input-background;
+      border: $form-input-border;
+      border-radius: $form-input-border-radius;
+      font-family: $font-family-body;
+      font-size: $font-size;
+      padding: 0 $form-input-padding-h;
+      text-align: left;
+      vertical-align: middle;
+    }
+
+    input,
+    select {
+      height: $form-input-padding-v * 2 + $font-size;
+      line-height: $form-input-padding-v * 2 + $font-size;
+    }
+
+    input {
+      &[type="text"],
+      &[type="password"] {
+        width: 100%;
+      }
+
+      &[type="checkbox"],
+      &[type="radio"] {
+        margin-left: 0.4rem;
+        margin-right: 0.4rem;
+      }
+    }
+
+    select {
+      width: 100%;
+
+      &[multiple] {
+        height: $form-input-padding-v * 2 + $font-size * 3;
+      }
+    }
+
+    textarea {
+      padding: ($form-input-padding-v - $form-input-border-width)
+        $form-input-padding-h;
+    }
+
+    @each $var in $variation-list {
+      &--#{$var} {
+        label {
+          color: map-get($colors, $var);
+        }
+
+        input,
+        select,
+        textarea {
+          border-color: map-get($colors, $var);
+          color: map-get($colors, $var);
+        }
+      }
+    }
+
+    &--multi {
+      display: flex;
+      flex-direction: row;
+      justify-content: space-between;
+      margin: 0 -0.8rem 1rem;
+
+      & > div {
+        flex: 1 1 10%;
+        margin: 0 0.8rem;
+
+        @include breakpointDF(mobm) {
+          margin: 0.4rem 0.8rem;
+        }
+      }
+
+      @include breakpointDF(mobm) {
+        flex-direction: column;
+      }
+    }
+  }
+}

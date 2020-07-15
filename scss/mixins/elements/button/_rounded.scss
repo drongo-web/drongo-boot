@@ -1,0 +1,5 @@
+@mixin make-button-rounded ($button-class: button, $button-modifier-class: rounded) {
+  .#{$button-class}--#{$button-modifier-class} {
+    border-radius: $button-height / 2;
+  }
+}

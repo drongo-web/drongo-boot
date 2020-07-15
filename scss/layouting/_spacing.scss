@@ -1,0 +1,208 @@
+$spacing-small: 1.2rem;
+$spacing-medium: 2.4rem;
+$spacing-large: 3.6rem;
+
+$font-small: 0.8rem;
+$font-medium: 1.4rem;
+$font-large: 2rem;
+
+
+/*------------------------------------------*/
+/*	SPACING & ALIGNMENT
+/*------------------------------------------*/
+
+.section {
+
+	&--padding-small {
+		padding-top: $spacing-small;
+		padding-bottom: $spacing-small;
+	}
+
+	&--padding-medium {
+		padding-top: $spacing-medium;
+		padding-bottom: $spacing-medium;
+	}
+
+	&--padding-large {
+		padding-top: $spacing-large;
+		padding-bottom: $spacing-large;
+	}
+
+	&--margin-small {
+		margin-top: $spacing-small;
+		margin-bottom: $spacing-small;
+	}
+
+	&--margin-medium {
+		margin-top: $spacing-medium;
+		margin-bottom: $spacing-medium;
+	}
+
+	&--margin-large {
+		margin-top: $spacing-large;
+		margin-bottom: $spacing-large;
+	}
+}
+
+/*------------------------------------------*/
+/*    Margin
+/*------------------------------------------*/
+
+.margin {
+
+	&--small {
+		margin: $spacing-small;
+	}
+
+	&--medium {
+		margin: $spacing-medium;
+	}
+
+	&--large {
+		margin: $spacing-large;
+	}
+
+	&--top-small {
+		margin-top: $spacing-small;
+	}
+
+	&--top-medium {
+		margin-top: $spacing-medium;
+	}
+
+	&--top-large {
+		margin-top: $spacing-large;
+	}
+
+	&--bottom-small {
+		margin-bottom: $spacing-small;
+	}
+
+	&--bottom-medium {
+		margin-bottom: $spacing-medium;
+	}
+
+	&--bottom-large {
+		margin-bottom: $spacing-large;
+	}
+
+	&--left-small {
+		margin-left: $spacing-small;
+	}
+
+	&--left-medium {
+		margin-left: $spacing-medium;
+	}
+
+	&--left-large {
+		margin-left: $spacing-large;
+	}
+
+	&--right-small {
+		margin-right: $spacing-small;
+	}
+
+	&--right-medium {
+		margin-right: $spacing-medium;
+	}
+
+	&--right-large {
+		margin-right: $spacing-large;
+	}
+}
+
+/*------------------------------------------*/
+/*    Padding
+/*------------------------------------------*/
+
+.padding {
+
+	&--small {
+		padding: $spacing-small;
+	}
+
+	&--medium {
+		padding: $spacing-medium;
+	}
+
+	&--large {
+		padding: $spacing-large;
+	}
+
+	&--top-small {
+		padding-top: $spacing-small;
+	}
+
+	&--top-medium {
+		padding-top: $spacing-medium;
+	}
+
+	&--top-large {
+		padding-top: $spacing-large;
+	}
+
+	&--bottom-small {
+		padding-bottom: $spacing-small;
+	}
+
+	&--bottom-medium {
+		padding-bottom: $spacing-medium;
+	}
+
+	&--bottom-large {
+		padding-bottom: $spacing-large;
+	}
+
+	&--left-small {
+		padding-left: $spacing-small;
+	}
+
+	&--left-medium {
+		padding-left: $spacing-medium;
+	}
+
+	&--left-large {
+		padding-left: $spacing-large;
+	}
+
+	&--right-small {
+		padding-right: $spacing-small;
+	}
+
+	&--right-medium {
+		padding-right: $spacing-medium;
+	}
+
+	&--right-large {
+		padding-right: $spacing-large;
+	}
+}
+
+/*------------------------------------------*/
+/*	 PARAGRAPHS
+/*------------------------------------------*/
+
+.paragraph-font {
+
+	&--small {
+		font-size: $font-small;
+	}
+
+	&--medium {
+		font-size: $font-medium;
+	}
+
+	&--large {
+		font-size: $font-large;
+	}
+}
+
+
+/*------------------------------------------*/
+/*	 TEXT WEIGHT AND CASES
+/*------------------------------------------*/
+
+.text {
+
+
+}
