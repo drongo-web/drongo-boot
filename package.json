@@ -1,0 +1,17 @@
+{
+  "name": "drongo-boot",
+  "version": "0.1.0",
+  "description": "",
+  "main": "scss/main.scss",
+  "scripts": {},
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/drongo-web/drongo-boot.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/drongo-web/drongo-boot/issues"
+  },
+  "homepage": "https://github.com/drongo-web/drongo-boot#readme"
+}
